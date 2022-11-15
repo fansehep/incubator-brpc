@@ -143,7 +143,7 @@ http_archive(
 
 http_archive(
     name = "com_github_google_crc32c",  # 2021-10-05T19:47:30Z
-    build_file = "//bazel/third_party/crc32c:crc32c.BUILD",
+    build_file = "//bazel:third_party/crc32c/crc32c.BUILD",
     sha256 = "ac07840513072b7fcebda6e821068aa04889018f24e10e46181068fb214d7e56",
     strip_prefix = "crc32c-1.1.2",
     urls = ["https://github.com/google/crc32c/archive/1.1.2.tar.gz"],
@@ -162,7 +162,7 @@ http_archive(
 
 http_archive(
     name = "com_github_google_leveldb",  # 2021-02-23T21:51:12Z
-    build_file = "//bazel/third_party/leveldb:leveldb.BUILD",
+    build_file = "//bazel:third_party/leveldb/leveldb.BUILD",
     sha256 = "9a37f8a6174f09bd622bc723b55881dc541cd50747cbd08831c2a82d620f6d76",
     strip_prefix = "leveldb-1.23",
     urls = [
@@ -172,7 +172,7 @@ http_archive(
 
 http_archive(
     name = "com_github_google_snappy",  # 2017-08-25
-    build_file = "//bazel/third_party/snappy:snappy.BUILD",
+    build_file = "//bazel:third_party/snappy/snappy.BUILD",
     sha256 = "3dfa02e873ff51a11ee02b9ca391807f0c8ea0529a4924afa645fbf97163f9d4",
     strip_prefix = "snappy-1.1.7",
     urls = [
@@ -183,7 +183,7 @@ http_archive(
 
 http_archive(
     name = "com_github_libevent_libevent",  # 2020-07-05T13:33:03Z
-    build_file = "//bazel/third_party/event:event.BUILD",
+    build_file = "//bazel:third_party/event/event.BUILD",
     sha256 = "92e6de1be9ec176428fd2367677e61ceffc2ee1cb119035037a27d346b0403bb",
     strip_prefix = "libevent-2.1.12-stable",
     urls = [
@@ -195,7 +195,7 @@ http_archive(
 # https://github.com/cloudflare/zlib
 http_archive(
     name = "com_github_madler_zlib",  # 2017-01-15T17:57:23Z
-    build_file = "//bazel/third_party/zlib:zlib.BUILD",
+    build_file = "//bazel:third_party/zlib/zlib.BUILD",
     sha256 = "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
     strip_prefix = "zlib-1.2.11",
     urls = [
@@ -235,7 +235,7 @@ http_archive(
 
 http_archive(
     name = "com_google_protobuf",  # 2021-10-29T00:04:02Z
-    build_file = "//bazel/third_party/protobuf:protobuf.BUILD",
+    build_file = "//bazel:third_party/protobuf/protobuf.BUILD",
     patch_cmds = [
         "sed -i protobuf.bzl -re '4,4d;417,508d'",
     ],
@@ -255,7 +255,7 @@ Set-Content protobuf.bzl -Value $content -Encoding UTF8
 # bRPC cannot use boringssl. Build openssl.
 http_archive(
     name = "openssl",  # 2021-12-14T15:45:01Z
-    build_file = "//bazel/third_party/openssl:openssl.BUILD",
+    build_file = "//bazel:third_party/openssl/openssl.BUILD",
     sha256 = "f89199be8b23ca45fc7cb9f1d8d3ee67312318286ad030f5316aca6462db6c96",
     strip_prefix = "openssl-1.1.1m",
     urls = [
@@ -266,7 +266,7 @@ http_archive(
 
 http_archive(
     name = "org_apache_thrift",  # 2021-09-11T11:54:01Z
-    build_file = "//bazel/third_party/thrift:thrift.BUILD",
+    build_file = "//bazel:third_party/thrift/thrift.BUILD",
     sha256 = "d5883566d161f8f6ddd4e21f3a9e3e6b8272799d054820f1c25b11e86718f86b",
     strip_prefix = "thrift-0.15.0",
     urls = ["https://archive.apache.org/dist/thrift/0.15.0/thrift-0.15.0.tar.gz"],
